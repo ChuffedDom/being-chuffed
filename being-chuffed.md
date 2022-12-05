@@ -65,5 +65,13 @@ As Chuffed seeks to be truly Global for talent and clients, it is essential to w
 
 ### 14. Every process needs to have the same purpose; to make itself redundant.
 
+---
+
 ## Ethos
 
+---
+
+## Etiquette
+
+- No acronyms
+- 
