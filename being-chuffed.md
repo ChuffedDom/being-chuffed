@@ -41,6 +41,8 @@ At the beginning of all inefficiency is the time management paradox; there is no
 
 ### 4. Everything is an experiment.
 
+At the end of the day we are telling stories about validation. Every piece of work not only delivers some kind of value, but also a means of gathering insight to iterate upon.
+
 ### 5. Anything + time = change.
 
 ### 7. In the end, it has to be about delivering some value to a person.
