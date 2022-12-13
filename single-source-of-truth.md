@@ -11,3 +11,5 @@ Google Drive is the Single Source of Truth for Chuffed Solutions, for the follow
 - More templates than any other platform.
 
 1. Create live documents and edit them to the latest version, to automatically depritrate and update.
+2. Use Google Sites for a department/project/initiative to give that particular cohort a brand.
+3. 

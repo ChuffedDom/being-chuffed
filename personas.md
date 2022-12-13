@@ -20,5 +20,7 @@ To get started, here are some prompts:
 - Currently, people are completing a task or achieving a goal by [some activity], but it comes with too high a price, too much time, etc.
 - People are using a solution but not the way it was intended to be used because ...
 
-Build a persona using this template, and as you make assumptions, you can gauge confidence in the success of the work or what questions you need to ask.
+Build a persona using this [template](https://docs.google.com/spreadsheets/d/1OZRvYQPRbPFGPjBZVFOAolo21sqwUPyOL5WFWrPkIUU/edit?usp=sharing), and as you make assumptions, you can gauge confidence in the success of the work or what questions you need to ask.
+
+
 
