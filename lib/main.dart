@@ -37,22 +37,25 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "🚧 UNDER CONSTRUCTION 🚧",
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            const SizedBox(height: 15),
-            const Text(
-                "This site is currently building something special. To find out more contact:"),
-            Text(
-              "dom@chuffed.solutions",
-              style: Theme.of(context).textTheme.bodyLarge,
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "🚧 UNDER CONSTRUCTION 🚧",
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              const SizedBox(height: 15),
+              const Text(
+                  "This site is currently building something special. To find out more contact:"),
+              Text(
+                "dom@chuffed.solutions",
+                style: Theme.of(context).textTheme.bodyLarge,
+              ),
+            ],
+          ),
         ),
       ),
     );
