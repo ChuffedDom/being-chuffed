@@ -30,6 +30,8 @@
 
 ### 1. (Our guiding principle) The value of a company is not only in the profit it makes but also in the positive impact on people’s lives and leaving the planet in a better place than they found it.
 
+### 2. Everything is a result of iteratation.
+
 ### 2. Make time, don’t find time.
 
 At the beginning of all inefficiency is the time management paradox; there is no time to change to do it the right way because we are too busy doing things the wrong way. 
