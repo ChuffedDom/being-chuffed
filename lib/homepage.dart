@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
           style: GoogleFonts.raleway(
             fontSize: 28,
             fontWeight: FontWeight.bold,
+            color: Theme.of(context).colorScheme.primary,
           ),
         ),
         centerTitle: true,
@@ -72,10 +73,10 @@ class HomePage extends StatelessWidget {
                           ValueItem(
                             icon: Icons.people,
                             backgroundColor:
-                                Theme.of(context).colorScheme.primaryContainer,
+                                Theme.of(context).colorScheme.tertiaryContainer,
                             textColor: Theme.of(context)
                                 .colorScheme
-                                .onPrimaryContainer,
+                                .onTertiaryContainer,
                             title: "People",
                             description: "something something something",
                             unorderedList: UnorderedList(
@@ -94,16 +95,16 @@ class HomePage extends StatelessWidget {
                           ValueItem(
                             icon: Icons.public,
                             backgroundColor:
-                                Theme.of(context).colorScheme.primaryContainer,
+                                Theme.of(context).colorScheme.tertiaryContainer,
                             textColor: Theme.of(context)
                                 .colorScheme
-                                .onPrimaryContainer,
+                                .onTertiaryContainer,
                             title: "Planet",
                             description: "something something something",
                             unorderedList: UnorderedList(
                               color: Theme.of(context)
                                   .colorScheme
-                                  .onPrimaryContainer,
+                                  .onTertiaryContainer,
                               children: const [
                                 "Sustainability",
                                 "Environment",
@@ -116,16 +117,16 @@ class HomePage extends StatelessWidget {
                           ValueItem(
                             icon: Icons.rocket_launch,
                             backgroundColor:
-                                Theme.of(context).colorScheme.primaryContainer,
+                                Theme.of(context).colorScheme.tertiaryContainer,
                             textColor: Theme.of(context)
                                 .colorScheme
-                                .onPrimaryContainer,
+                                .onTertiaryContainer,
                             title: "Progress",
                             description: "something something something",
                             unorderedList: UnorderedList(
                               color: Theme.of(context)
                                   .colorScheme
-                                  .onPrimaryContainer,
+                                  .onTertiaryContainer,
                               children: const [
                                 "Iteration",
                                 "Innovation",
@@ -136,11 +137,12 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),
-              )
+              ),
+              const SizedBox(height: 24),
             ],
           ),
         ),

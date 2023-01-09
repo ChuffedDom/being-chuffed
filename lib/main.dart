@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Being Chuffed',
       theme: ThemeData(
-        colorSchemeSeed: Color.fromARGB(24, 44, 62, 80),
+        colorSchemeSeed: Color.fromARGB(255, 4, 76, 130),
         textTheme: GoogleFonts.latoTextTheme(),
         fontFamily: '--apple-system',
         useMaterial3: true,
