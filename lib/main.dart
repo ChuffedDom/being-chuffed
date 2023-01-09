@@ -1,5 +1,7 @@
+import 'package:being_chuffed/homepage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -16,26 +18,35 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Being Chuffed',
       theme: ThemeData(
+        colorSchemeSeed: Color.fromARGB(255, 60, 71, 197),
+        textTheme: GoogleFonts.latoTextTheme(),
         fontFamily: '--apple-system',
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      initialRoute: '/',
+      routes: {'/': (context) => HomePage()},
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+class UnderConstruction extends StatelessWidget {
+  const UnderConstruction({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Being Chuffed"),
+        title: Text(
+          "Being Chuffed",
+          style: GoogleFonts.raleway(
+            fontSize: 48,
+          ),
+        ),
         centerTitle: true,
       ),
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(24.0),
