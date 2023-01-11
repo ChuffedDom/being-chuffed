@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
             children: [
               const SizedBox(height: 16.0),
               Card(
-                color: Theme.of(context).colorScheme.surface,
+                color: Theme.of(context).colorScheme.background,
                 child: Padding(
                   padding: const EdgeInsets.all(24.0),
                   child: Column(
@@ -78,7 +78,6 @@ class HomePage extends StatelessWidget {
                                 .colorScheme
                                 .onTertiaryContainer,
                             title: "People",
-                            description: "something something something",
                             unorderedList: UnorderedList(
                               color: Theme.of(context)
                                   .colorScheme
@@ -100,7 +99,6 @@ class HomePage extends StatelessWidget {
                                 .colorScheme
                                 .onTertiaryContainer,
                             title: "Planet",
-                            description: "something something something",
                             unorderedList: UnorderedList(
                               color: Theme.of(context)
                                   .colorScheme
@@ -122,7 +120,6 @@ class HomePage extends StatelessWidget {
                                 .colorScheme
                                 .onTertiaryContainer,
                             title: "Progress",
-                            description: "something something something",
                             unorderedList: UnorderedList(
                               color: Theme.of(context)
                                   .colorScheme
@@ -137,6 +134,67 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                         ],
+                      ),
+                      const SizedBox(height: 24.0),
+                      Text(
+                        "Principles",
+                        style: Theme.of(context).textTheme.titleLarge,
+                      ),
+                      const SizedBox(height: 24.0),
+                      const PrincipleItem(
+                        orderNumber: 1,
+                        mainText:
+                            "(Our guiding principle) The value of a company is not only in the profit it makes but also in the positive impact on people’s lives and leaving the planet in a better place than they found it.",
+                      ),
+                      const PrincipleItem(
+                        orderNumber: 2,
+                        mainText:
+                            "All we ever really do is tell stories about people.",
+                      ),
+                      const PrincipleItem(
+                        orderNumber: 3,
+                        mainText: "Community counts.",
+                      ),
+                      const PrincipleItem(
+                        orderNumber: 4,
+                        mainText: "Everything is an experiment.",
+                        subText:
+                            "As we work we are always chasing more validation. Every piece of work not only delivers some kind of value, but also a means of gathering insight to iterate upon.",
+                      ),
+                      const PrincipleItem(
+                        orderNumber: 5,
+                        mainText: "Anything + time = change.",
+                      ),
+                      const PrincipleItem(
+                        orderNumber: 6,
+                        mainText: "Success is a result of iteratation.",
+                      ),
+                      const PrincipleItem(
+                        orderNumber: 7,
+                        mainText:
+                            "Success is finding the simple solution to a complex problem without simplifying the problem first.",
+                      ),
+                      const PrincipleItem(
+                        orderNumber: 8,
+                        mainText: "Success is failing fast and learning hard.",
+                      ),
+                      const PrincipleItem(
+                        orderNumber: 9,
+                        mainText:
+                            "In the end, it has to be about delivering some value to a person.",
+                      ),
+                      const PrincipleItem(
+                        orderNumber: 10,
+                        mainText: "Urgency is the enemy.",
+                      ),
+                      const PrincipleItem(
+                        orderNumber: 11,
+                        mainText:
+                            "No argument is greater than the one of inclusion.",
+                      ),
+                      const PrincipleItem(
+                        orderNumber: 12,
+                        mainText: "Purpose, Vision, Goals, and Success.",
                       ),
                     ],
                   ),
@@ -192,7 +250,6 @@ class UnorderedList extends StatelessWidget {
 
 class ValueItem extends StatelessWidget {
   final String title;
-  final String description;
   final UnorderedList unorderedList;
   final Color textColor;
   final Color backgroundColor;
@@ -201,7 +258,6 @@ class ValueItem extends StatelessWidget {
   const ValueItem({
     super.key,
     required this.title,
-    required this.description,
     required this.unorderedList,
     this.textColor = Colors.white,
     this.backgroundColor = Colors.black,
@@ -228,18 +284,53 @@ class ValueItem extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
               ),
-              /* const SizedBox(height: 16),
-               Text(
-                description,
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: textColor,
-                    ),
-              ), */
               unorderedList,
               const SizedBox(height: 8),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class PrincipleItem extends StatelessWidget {
+  final int orderNumber;
+  final String mainText;
+  final String? subText;
+  const PrincipleItem(
+      {super.key,
+      required this.orderNumber,
+      required this.mainText,
+      this.subText});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(width: 24),
+              SizedBox(
+                width: 24,
+                child: Text(
+                  textAlign: TextAlign.right,
+                  "${orderNumber.toString()}.",
+                ),
+              ),
+              const SizedBox(width: 8),
+              Flexible(
+                child: Text(
+                  mainText,
+                ),
+              ),
+              const SizedBox(width: 24),
+            ],
+          ),
+          const SizedBox(height: 8),
+        ],
       ),
     );
   }
