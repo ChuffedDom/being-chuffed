@@ -194,7 +194,7 @@ class HomePage extends StatelessWidget {
                       ),
                       const PrincipleItem(
                         orderNumber: 12,
-                        mainText: "Purpose, Vision, Goals, and Success.",
+                        mainText: "Goals, goals, goals.",
                       ),
                     ],
                   ),
