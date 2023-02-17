@@ -2,7 +2,7 @@
 
 As information becomes bigger in scope and reach, being able to refer to them 
 
-Google Drive is the Single Source of Truth for Chuffed Solutions, for the following reasons:
+Google Workspace is the Single Source of Truth for Chuffed Solutions, for the following reasons:
 - It has flexiblity like no other tool.
 - It is accessible to everyeone internally and externally.
 - We can create interopability between hugely varying pieces of work.
