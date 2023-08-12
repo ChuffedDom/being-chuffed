@@ -26,8 +26,16 @@ class HomePage extends StatelessWidget {
           child: ListView(
             children: [
               const SizedBox(height: 16.0),
-              Card(
-                color: Theme.of(context).colorScheme.background,
+              Container(
+                decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.surface,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Theme.of(context).colorScheme.outline,
+                        offset: Offset(2, 0),
+                        blurRadius: 4,
+                      )
+                    ]),
                 child: Padding(
                   padding: const EdgeInsets.all(24.0),
                   child: Column(
@@ -36,10 +44,9 @@ class HomePage extends StatelessWidget {
                       const SizedBox(height: 24),
                       Text(
                         "Welcome to the Chuffed Solutions Handbook, affectionately named Being Chuffed.",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyLarge!
-                            .copyWith(fontWeight: FontWeight.bold),
+                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                            fontWeight: FontWeight.bold,
+                            color: Theme.of(context).colorScheme.onSurface),
                       ),
                       const SizedBox(height: 24),
                       const Text(
@@ -61,7 +68,8 @@ class HomePage extends StatelessWidget {
                       const SizedBox(height: 24.0),
                       Text(
                         "Values",
-                        style: Theme.of(context).textTheme.titleLarge,
+                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                            color: Theme.of(context).colorScheme.primary),
                       ),
                       const SizedBox(height: 24.0),
                       OverflowBar(
@@ -71,17 +79,14 @@ class HomePage extends StatelessWidget {
                         overflowAlignment: OverflowBarAlignment.center,
                         children: [
                           ValueItem(
+                            imageURL:
+                                "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
                             icon: Icons.people,
-                            backgroundColor:
-                                Theme.of(context).colorScheme.tertiaryContainer,
-                            textColor: Theme.of(context)
-                                .colorScheme
-                                .onTertiaryContainer,
-                            title: "People",
+                            title: "🧑‍🤝‍🧑 People",
                             unorderedList: UnorderedList(
                               color: Theme.of(context)
                                   .colorScheme
-                                  .onPrimaryContainer,
+                                  .onSecondaryContainer,
                               children: const [
                                 "Inclusion",
                                 "Kindness",
@@ -92,17 +97,14 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           ValueItem(
+                            imageURL:
+                                "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1744&q=80",
                             icon: Icons.public,
-                            backgroundColor:
-                                Theme.of(context).colorScheme.tertiaryContainer,
-                            textColor: Theme.of(context)
-                                .colorScheme
-                                .onTertiaryContainer,
-                            title: "Planet",
+                            title: "🌍 Planet",
                             unorderedList: UnorderedList(
                               color: Theme.of(context)
                                   .colorScheme
-                                  .onTertiaryContainer,
+                                  .onSecondaryContainer,
                               children: const [
                                 "Sustainability",
                                 "Environment",
@@ -113,17 +115,14 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           ValueItem(
+                            imageURL:
+                                "https://images.unsplash.com/photo-1518364538800-6bae3c2ea0f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80",
                             icon: Icons.rocket_launch,
-                            backgroundColor:
-                                Theme.of(context).colorScheme.tertiaryContainer,
-                            textColor: Theme.of(context)
-                                .colorScheme
-                                .onTertiaryContainer,
-                            title: "Progress",
+                            title: "🚀 Progress",
                             unorderedList: UnorderedList(
                               color: Theme.of(context)
                                   .colorScheme
-                                  .onTertiaryContainer,
+                                  .onSecondaryContainer,
                               children: const [
                                 "Iteration",
                                 "Innovation",
@@ -138,7 +137,8 @@ class HomePage extends StatelessWidget {
                       const SizedBox(height: 24.0),
                       Text(
                         "Principles",
-                        style: Theme.of(context).textTheme.titleLarge,
+                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                            color: Theme.of(context).colorScheme.primary),
                       ),
                       const SizedBox(height: 24.0),
                       const PrincipleItem(
@@ -194,6 +194,10 @@ class HomePage extends StatelessWidget {
                       ),
                       const PrincipleItem(
                         orderNumber: 12,
+                        mainText: "Strategy > Tactics.",
+                      ),
+                      const PrincipleItem(
+                        orderNumber: 13,
                         mainText: "Purpose, Vision, Goals, and Success.",
                       ),
                     ],
@@ -254,6 +258,7 @@ class ValueItem extends StatelessWidget {
   final Color textColor;
   final Color backgroundColor;
   final IconData icon;
+  final String imageURL;
 
   const ValueItem({
     super.key,
@@ -262,6 +267,7 @@ class ValueItem extends StatelessWidget {
     this.textColor = Colors.white,
     this.backgroundColor = Colors.black,
     required this.icon,
+    required this.imageURL,
   });
 
   @override
@@ -269,25 +275,37 @@ class ValueItem extends StatelessWidget {
     return SizedBox(
       width: 224,
       child: Card(
-        color: backgroundColor,
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Icon(icon, color: textColor),
-              const SizedBox(height: 8.0),
-              Text(
-                title,
-                style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                      color: textColor,
-                      fontWeight: FontWeight.bold,
-                    ),
+        color: Theme.of(context).colorScheme.secondaryContainer,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.network(imageURL),
+            ),
+            // Icon(icon,
+            // color: Theme.of(context).colorScheme.onSecondaryContainer),
+            const SizedBox(height: 8.0),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                          color: Theme.of(context)
+                              .colorScheme
+                              .onSecondaryContainer,
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                  unorderedList,
+                ],
               ),
-              unorderedList,
-              const SizedBox(height: 8),
-            ],
-          ),
+            ),
+            const SizedBox(height: 8),
+          ],
         ),
       ),
     );

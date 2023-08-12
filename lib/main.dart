@@ -8,11 +8,11 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(const BeingChuffed());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BeingChuffed extends StatelessWidget {
+  const BeingChuffed({super.key});
 
   // This widget is the root of your application.
   @override
@@ -20,48 +20,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Being Chuffed',
       theme: ThemeData(
-        colorSchemeSeed: Color.fromARGB(255, 4, 76, 130),
-        textTheme: GoogleFonts.latoTextTheme(),
+        colorSchemeSeed: Color.fromARGB(255, 71, 71, 191),
+        textTheme: GoogleFonts.poppinsTextTheme(),
         fontFamily: '--apple-system',
         useMaterial3: true,
       ),
       home: const HomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Being Chuffed"),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(24.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "🚧 UNDER CONSTRUCTION 🚧",
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-              const SizedBox(height: 15),
-              const Text(
-                  "This site is currently building something special. To find out more contact:"),
-              Text(
-                "dom@chuffed.solutions",
-                style: Theme.of(context).textTheme.bodyLarge,
-              ),
-            ],
-          ),
-        ),
-      ),
     );
   }
 }
