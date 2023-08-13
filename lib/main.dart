@@ -1,4 +1,5 @@
 import 'package:being_chuffed/homepage.dart';
+import 'package:being_chuffed/pages.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,7 +26,11 @@ class BeingChuffed extends StatelessWidget {
         fontFamily: '--apple-system',
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomePage(),
+        '/persona': (context) => const Persona(),
+      },
     );
   }
 }
