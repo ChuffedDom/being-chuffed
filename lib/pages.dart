@@ -221,3 +221,16 @@ class Persona extends StatelessWidget {
     );
   }
 }
+
+class Scope extends StatelessWidget {
+  const Scope({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const DefaultPages(
+      lastEditDate: "Wednesday 16th August 2023",
+      markdownURL:
+          "https://raw.githubusercontent.com/ChuffedDom/being-chuffed-handbook/main/Fundamentals/scoping.md",
+    );
+  }
+}

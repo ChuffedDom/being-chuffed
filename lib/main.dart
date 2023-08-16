@@ -30,6 +30,7 @@ class BeingChuffed extends StatelessWidget {
       routes: {
         '/': (context) => const HomePage(),
         '/persona': (context) => const Persona(),
+        '/scope': (context) => const Scope(),
       },
     );
   }

@@ -36,6 +36,21 @@ class MainDrawer extends StatelessWidget {
                 },
               ),
             ],
+          ),
+          ExpansionTile(
+            title: const Text("Fundamentals"),
+            children: [
+              ListTile(
+                title: const Padding(
+                  padding: EdgeInsets.only(left: 8),
+                  child: Text("Scope"),
+                ),
+                onTap: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/scope', (route) => false);
+                },
+              ),
+            ],
           )
         ],
       ),
