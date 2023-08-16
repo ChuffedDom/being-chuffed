@@ -29,7 +29,9 @@ class DefaultPages extends StatelessWidget {
         color: colors.onSurface,
       ),
       h1: textTheme.displaySmall!.copyWith(
-        color: colors.onSurface,
+        color: colors.primary,
+        fontWeight: FontWeight.w800,
+        fontSize: 36,
       ),
       h2: textTheme.headlineLarge!.copyWith(
         color: colors.onSurface,
