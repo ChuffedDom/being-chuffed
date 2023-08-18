@@ -33,8 +33,10 @@ class DefaultPages extends StatelessWidget {
         fontWeight: FontWeight.w800,
         fontSize: 36,
       ),
-      h2: textTheme.headlineLarge!.copyWith(
-        color: colors.onSurface,
+      h2: textTheme.headlineMedium!.copyWith(
+        color: colors.primary,
+        fontWeight: FontWeight.w800,
+        fontSize: 24,
       ),
       h3: textTheme.headlineMedium!.copyWith(
         color: colors.onSurface,
@@ -233,6 +235,19 @@ class Scope extends StatelessWidget {
       lastEditDate: "Wednesday 16th August 2023",
       markdownURL:
           "https://raw.githubusercontent.com/ChuffedDom/being-chuffed-handbook/main/Fundamentals/scoping.md",
+    );
+  }
+}
+
+class Meetings extends StatelessWidget {
+  const Meetings({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const DefaultPages(
+      lastEditDate: "Friday 18th August 2023",
+      markdownURL:
+          "https://raw.githubusercontent.com/ChuffedDom/being-chuffed-handbook/main/Fundamentals/meetings.md",
     );
   }
 }

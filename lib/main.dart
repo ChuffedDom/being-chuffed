@@ -31,6 +31,7 @@ class BeingChuffed extends StatelessWidget {
         '/': (context) => const HomePage(),
         '/persona': (context) => const Persona(),
         '/scope': (context) => const Scope(),
+        '/meetings': (context) => const Meetings(),
       },
     );
   }

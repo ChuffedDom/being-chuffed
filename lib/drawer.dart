@@ -35,6 +35,16 @@ class MainDrawer extends StatelessWidget {
                       context, '/scope', (route) => false);
                 },
               ),
+              ListTile(
+                title: const Padding(
+                  padding: EdgeInsets.only(left: 8),
+                  child: Text("Meetings"),
+                ),
+                onTap: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/meetings', (route) => false);
+                },
+              ),
             ],
           ),
           ExpansionTile(
