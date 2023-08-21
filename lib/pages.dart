@@ -39,7 +39,9 @@ class DefaultPages extends StatelessWidget {
         fontSize: 24,
       ),
       h3: textTheme.headlineMedium!.copyWith(
-        color: colors.onSurface,
+        color: colors.primary,
+        fontWeight: FontWeight.w600,
+        fontSize: 18,
       ),
       h4: textTheme.headlineSmall!.copyWith(
         color: colors.onSurface,
@@ -248,6 +250,19 @@ class Meetings extends StatelessWidget {
       lastEditDate: "Friday 18th August 2023",
       markdownURL:
           "https://raw.githubusercontent.com/ChuffedDom/being-chuffed-handbook/main/Fundamentals/meetings.md",
+    );
+  }
+}
+
+class TechStack extends StatelessWidget {
+  const TechStack({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const DefaultPages(
+      lastEditDate: "Monday 21st August 2023",
+      markdownURL:
+          "https://raw.githubusercontent.com/ChuffedDom/being-chuffed-handbook/main/Engineering/Stack.md",
     );
   }
 }

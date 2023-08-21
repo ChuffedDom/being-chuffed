@@ -62,6 +62,21 @@ class MainDrawer extends StatelessWidget {
               ),
             ],
           ),
+          ExpansionTile(
+            title: const Text("Engineering"),
+            children: [
+              ListTile(
+                title: const Padding(
+                  padding: EdgeInsets.only(left: 8),
+                  child: Text("Stack"),
+                ),
+                onTap: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/techstack', (route) => false);
+                },
+              ),
+            ],
+          ),
         ],
       ),
     );
