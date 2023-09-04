@@ -151,7 +151,7 @@ class HomePage extends StatelessWidget {
                       const PrincipleItem(
                         orderNumber: 2,
                         mainText:
-                            "All we ever really do is tell stories about people.",
+                            "All we ever really do is tell empathetic stories about people.",
                       ),
                       const PrincipleItem(
                         orderNumber: 3,
@@ -187,7 +187,7 @@ class HomePage extends StatelessWidget {
                       ),
                       const PrincipleItem(
                         orderNumber: 10,
-                        mainText: "Urgency is the enemy.",
+                        mainText: "Urgency is the enemy of the important.",
                       ),
                       const PrincipleItem(
                         orderNumber: 11,
@@ -200,7 +200,7 @@ class HomePage extends StatelessWidget {
                       ),
                       const PrincipleItem(
                         orderNumber: 13,
-                        mainText: "Purpose, Vision, Goals, and Success.",
+                        mainText: "Legitimacy is needed in both concept and the details",
                       ),
                     ],
                   ),
